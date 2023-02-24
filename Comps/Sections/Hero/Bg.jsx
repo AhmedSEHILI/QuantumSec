@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Bg(props) {
+function Bg() {
     return (
         <div className="relative -z-10">
             <img src="/sections/hero/yellow.svg" alt="" className="absolute blur-xl -left-3 -top-3" />
