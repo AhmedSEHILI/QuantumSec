@@ -16,7 +16,7 @@
 }
 
 .section{
-  @apply py-20 container flex flex-col  items-center
+  @apply py-20 container flex flex-col  items-center mx-auto
 }
 
 .SecTitle {
