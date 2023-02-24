@@ -1,10 +1,10 @@
 import React from 'react';
 
-function NavButt({section}) {
+function NavButt({section,href}) {
     return (
-        <button className="hover:bg-green1 py-[10px] px-[12px] rounded-lg font-semold text-xl">
+        <a href={href} className="hover:bg-green1 py-[10px] px-[12px] rounded-lg font-semibold text-xl">
             {section}
-        </button>
+        </a>
     );
 }
 
