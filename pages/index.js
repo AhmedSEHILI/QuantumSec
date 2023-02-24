@@ -1,14 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Hero from "@/Comps/Sections/Hero/Hero";
+import NavBar from "@/Comps/Shared/NavBar";
 
 export default function Home() {
   return (
     <div className="">
-      hello world
+      <NavBar />
+      <Hero />
     </div>
   )
 }
