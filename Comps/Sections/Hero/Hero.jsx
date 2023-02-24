@@ -5,8 +5,9 @@ import Bg from './Bg';
 function Hero(props) {
     return (
 
-        <div className="relative">
-            <div className="absolute flex flex-row pt-44 justify-evenly items-center w-full">
+        <div className="">
+            <Bg />
+            <div className=" flex flex-row pt-44 justify-evenly items-center w-full">
                 <div className="flex flex-col gap-16">
                     <p className="">— send secure messages .. quantum can’t break it   </p>
                     <h2 className="font-extrabold text-6xl">Here is <br/>some text</h2>
@@ -19,7 +20,6 @@ function Hero(props) {
                 </div>
             <img src="https://img.freepik.com/free-vector/safe-concept-illustration_114360-428.jpg?w=826&t=st=1677232859~exp=1677233459~hmac=9f4d1f708adaec9f87753513d88dc7ff708536954cabdc6b1889fd820087828b" alt="" className="w-[600px] h-[600px]" />
             </div>
-            <Bg />
 
         </div>
     );
