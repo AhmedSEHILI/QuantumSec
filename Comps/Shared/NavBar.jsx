@@ -25,6 +25,7 @@ export default function NavBar() {
         }`}
       >
         <div className="flex flex-col items-center lg:flex-row md:justify-end md:w-full space-y-4 lg:space-y-0 my-4 font-semibold text-sm md:text-base lg:text-lg lg:space-x-8">
+                    <NavButt setVisible={setVisible} href={'/#'} section={'Home'} />
                    <NavButt setVisible={setVisible} href={'/#services'} section={'Our services'} />
                    <NavButt setVisible={setVisible} href={'/#questions'} section={'FAQs'} />
                    <NavButt setVisible={setVisible} href={'/#contact'} section={'Contact Us'} />
