@@ -19,7 +19,7 @@ function Contact(props) {
             <Bg />
             <div id='contact' className="section">
                  <h3 className="SecTitle">~ Contact Us ~</h3>
-                 <div className="flex flex-col gap-6 w-[370px] md:w-[700px] pt-10">
+                 <div className="flex flex-col gap-6 w-[300px] sm:w-[370px] md:w-[700px] pt-10">
                     <div className="flex flex-col md:flex-row gap-4">
                         <input  onChange={(e)=>setName(e.target.value)}value={name} type="text" placeholder="Name" className="border-2 md:w-[49%] h-10 rounded-md px-4 bg-slate-50 placeholder:text-gray-400 placeholder:text-xl " />
                         <input onChange={(e)=>setEmail(e.target.value)} value={email} type="email" placeholder="Email" className="border-2 md:w-[49%] h-10 rounded-md px-4 bg-slate-50 placeholder:text-gray-400 placeholder:text-xl " />

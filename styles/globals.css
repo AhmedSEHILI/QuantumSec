@@ -23,10 +23,9 @@ body{
 }
 
 .SecTitle {
-    font-size: 48px;
     font-weight: 700;
     color: #38A7A1;
-    @apply mb-16;
+    @apply mb-16 max-w-sm text-3xl font-bold md:text-5xl;
 }
 
 .collapsible {

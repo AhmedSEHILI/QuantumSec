@@ -55,9 +55,9 @@ function Demo() {
     <div className='py-40 mx-auto container flex flex-col justify-start items-center flex-wrap   min-h-screen'>
         <h3 className="SecTitle">TRY IT</h3>
         <input type="checkbox" className="toggle toggle-accent mb-10" onChange={()=>setEncrypt(!encrypt)} checked={encrypt} />
-        <div className='flex justify-center w-[80%]'>
-          <input placeholder={encrypt?"Data to encrypt":"Data to decrypt"} onChange={(e)=>setMessage(e.target.value)} value={message} className='border-y-[1px] border-l-[1px] rounded-l-lg flex-1  px-5 h-16 text-3xl border-green3 outline-none' type="text" />
-          <button onClick={handleClick} className='bg-green3 relative text-white font-semibold px-6 py-2 rounded-lg -left-5 '>{encrypt?"Encrypt":"Decrypt"}</button>
+        <div className='flex justify-center w-[70%] ml-3 md:w-[80%] max-w-sm'>
+          <input placeholder={encrypt?"Data to encrypt":"Data to decrypt"} onChange={(e)=>setMessage(e.target.value)} value={message} className='border-y-[1px] border-l-[1px] rounded-l-lg flex-1 px-3  md:px-5 h-16 text-base sm:text-xl md:text-3xl border-green3 outline-none' type="text" />
+          <button onClick={handleClick} className='bg-green3 relative text-white font-semibold text-base md:text-xl px-4 md:px-6 py-2 rounded-lg -left-5 '>{encrypt?"Encrypt":"Decrypt"}</button>
         </div>
        
         <div className='flex flex-col items-start justify-start self-start '>

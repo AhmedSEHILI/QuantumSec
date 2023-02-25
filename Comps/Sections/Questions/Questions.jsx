@@ -30,7 +30,7 @@ function Questions() {
         <div id='questions' className="section ">
         
         <h3 className="SecTitle">~ FAQ ~</h3>
-        <div className='flex flex-col items-center w-[80%] md:w-[60%]'>
+        <div className='flex flex-col items-center w-[90%] sm:w-[85%] md:w-[60%]'>
         {questions.map(question=>{
             return <Question key={question.id} title={question.title} desc={question.desc}/> 
         })}

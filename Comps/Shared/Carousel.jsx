@@ -43,15 +43,15 @@ function Carousel({members}) {
           {({ isActive, isNext, isPrev }) => (
             
             <div className='flex flex-col justify-between items-center'>
-                <div className={`w-64 rounded-full h-64 mb-10 flex justify-center items-center ${isActive && 'w-80 h-80 shadow-[0_8px_10px_rgb(145,206,209)]'}`}>
+                <div className={`w-44 h-44 md:w-64  md:h-64 rounded-full mt-20 md:mb-5 flex justify-center items-center ${isActive && 'w-64 h-64 md:w-80 md:h-80 shadow-[0_8px_10px_rgb(145,206,209)]'}`}>
                     <div className='w-full h-full rounded-full select-none'>
                         <img className='w-full rounded-full h-full'  src={sponsor.image} alt={sponsor.lastname} />
                     </div>
                 </div>
                 <div className={`${isActive && 'bg-green3 rounded-3xl px-8 py-2'} select-none w-fit cursor-pointer`}>
                     
-                    <p className={`${isActive ? 'text-xl text-white':'text-base text-white'} `}>{sponsor.firstname}</p>
-                    <h2 className={`${isActive ? 'text-3xl text-white':'text-xl text-green3'} uppercase  font-bold`}>{sponsor.lastname}</h2>
+                    <p className={`${isActive ? 'text-xl text-white':' text-white'} text-sm md:text-base `}>{sponsor.firstname}</p>
+                    <h2 className={`${isActive ? 'text-3xl text-white':' text-green3'} text-lg md:text-xl uppercase  font-bold`}>{sponsor.lastname}</h2>
                 </div>
             </div>
           )}
