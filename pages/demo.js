@@ -22,13 +22,9 @@ function Demo() {
 
 
     if (encrypt){
-      const res2 =await axios.get('http://chih3b.pythonanywhere.com/getKP');
+      const res2 =await axios.get(process.env.BASE_URL+'/getKP');
       setDecData(res2.data)
-      const res = await axios.post('http://chih3b.pythonanywhere.com/enc',{msg:message},{
-        headers:{
-          "Access-Control-Allow-Origin": "http://localhost:3000"
-        }
-      }); 
+      const res = await axios.post(process.env.BASE_URL+'/enc',{msg:message}); 
       setEncryptData(res.data.enc);
       setEncryptShow(true);
       setTimeout(() => {
@@ -36,7 +32,7 @@ function Demo() {
                 }, 11000);
       
     }else{
-      const res = await axios.post('http://chih3b.pythonanywhere.com/dec',{enc:message});
+      const res = await axios.post(process.env.BASE_URL+'/dec',{enc:message});
       if (res.data.ok){
         setDecryptData(res.data.dec);
         setDecryptShow(true);
