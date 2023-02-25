@@ -29,7 +29,7 @@ export default function NavBar() {
                    <NavButt href={'/#questions'} section={'FAQs'} />
                    <NavButt href={'/#contact'} section={'Contact Us'} />
                    <NavButt href={'/#about'} section={'About Us'} />
-                   <Button href={"/demo"} msg={'Try it !'} bg={'bg-green4 text-white hover:bg-green1 hover:text-green4'}/>
+                 <Link href="/demo"> <Button  msg={'Try it !'} bg={'bg-green4 text-white hover:bg-green1 hover:text-green4'}/></Link> 
                     
 
         </div>

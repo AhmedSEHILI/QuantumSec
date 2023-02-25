@@ -19,6 +19,8 @@ function Demo() {
     setDecryptShow(false);
     setEncryptShow(false);
     setIsVisible(false)
+
+
     if (encrypt){
       const res2 =await axios.get('http://chih3b.pythonanywhere.com/getKP');
       setDecData(res2.data)
@@ -28,7 +30,6 @@ function Demo() {
         }
       }); 
       setEncryptData(res.data.enc);
-
       setEncryptShow(true);
       setTimeout(() => {
                 setIsVisible(true);
@@ -59,49 +60,47 @@ function Demo() {
           <button onClick={handleClick} className='bg-green3 relative text-white font-semibold px-6 py-2 rounded-lg -left-5 '>{encrypt?"Encrypt":"Decrypt"}</button>
         </div>
        
-        <pre className='text-black text-left mt-24 md:self-start break-all break-words max-w-5xl font-medium text-2xl '>
-        {encryptShow && <>
-        <Typewriter
-              words={['Encrypting\nGenerating key pair ..... \nEncrypting message ......\nHere is the encrypted data (hex) :']}
-              cursor
-              cursorStyle='|'
-              typeSpeed={100}
-            />
-        </>
-        }
-        {
-          decryptShow && 
-          <>
-          <Typewriter
-              words={['Decrypting\nDecrypting cipher ......\nHere is the original data:']}
-              cursor
-              cursorStyle='|'
-              typeSpeed={100}
-              
-            />
-          </>
-          
-
-        }
-        
-        </pre>
-        <div className='text-black text-left self-start font-medium text-2xl break-words break-all'>
+        <div className='flex flex-col items-start justify-start '>
+          <pre className='text-black text-left mt-24 md:self-start  max-w-5xl font-medium text-2xl '>
           {encryptShow && <>
-              {isVisible&& encryptData &&<p >{encryptData}</p>}
-            {isVisible &&<p className='underline cursor-pointer'  onClick={()=>setIsVisibleD(true)}>Would you like to view the public key ?</p>}
-            {isVisibleD && decData && decData.pub}
-          </>}
+          <Typewriter
+                words={['Encrypting\nGenerating key pair ..... \nEncrypting message ......\nHere is the encrypted data (hex) :']}
+                cursor
+                cursorStyle='|'
+                typeSpeed={100}
+              />
+          </>
+          }
           {
             decryptShow && 
             <>
-               {isVisible &&decryptData &&<p className='self-start text-left' >{decryptData}</p>}
+            <Typewriter
+                words={['Decrypting\nDecrypting cipher ......\nHere is the original data:']}
+                cursor
+                cursorStyle='|'
+                typeSpeed={100}
+                
+              />
             </>
-            
+          }
           
-          }
-          {
-            error && <p className='text-red font-semibold'>You must enter a hex string</p>
-          }
+          </pre>
+          <div className='text-black text-left self-start font-medium text-2xl break-words break-all'>
+            {encryptShow && <>
+                {isVisible&& encryptData &&<p  >{encryptData}</p>}
+              {isVisible &&<p className='underline cursor-pointer '  onClick={()=>setIsVisibleD(true)}>Would you like to view the public key ?</p>}
+              {isVisibleD && decData && decData.pub}
+            </>}
+            {
+              decryptShow && 
+              <>
+                 {isVisible &&decryptData &&<p  >{decryptData}</p>}
+              </>
+            }
+            {
+              error && <p className='text-red font-semibold'>You must enter a hex string</p>
+            }
+          </div>
         </div>
     </div>
   )
