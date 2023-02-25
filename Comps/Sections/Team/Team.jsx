@@ -6,12 +6,12 @@ function Team() {
     {
         firstname:"Ahmed",
         lastname:"Sehili",
-        image:"/sections/team/ahmed.jpg"
+        image:"/sections/team/ahmed.svg"
     },
     {
         firstname:"Maroua",
         lastname:"Amrouche",
-        image:"/sections/team/maroua.jpg"
+        image:"/sections/team/maroua.svg"
     }
     ,
     {
@@ -27,7 +27,7 @@ function Team() {
   {
     firstname:"Abdelalim",
     lastname:"Atoui",
-    image:"/sections/team/abdelalim.jpg"
+    image:"/sections/team/abdelalim.svg"
 }
 ]
   return (
