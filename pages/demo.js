@@ -1,3 +1,4 @@
+import { BASE_URL } from '@/data/data';
 import axios from 'axios';
 import  { useState } from 'react'
 import { Typewriter } from 'react-simple-typewriter'
@@ -22,9 +23,9 @@ function Demo() {
 
     if (message.trim().length){
       if (encrypt){
-        const res2 =await axios.get(process.env.NEXT_PUBLIC_BASE_URL+'/getKP');
+        const res2 =await axios.get(BASE_URL+'/getKP');
         setDecData(res2.data)
-        const res = await axios.post(process.env.NEXT_PUBLIC_BASE_URL+'/enc',{msg:message}); 
+        const res = await axios.post(BASE_URL+'/enc',{msg:message}); 
         setEncryptData(res.data.enc);
         setEncryptShow(true);
         setTimeout(() => {
@@ -32,7 +33,7 @@ function Demo() {
                   }, 11000);
         
       }else{
-        const res = await axios.post(process.env.NEXT_PUBLIC_BASE_URL+'/dec',{enc:message});
+        const res = await axios.post(BASE_URL+'/dec',{enc:message});
         if (res.data.ok){
           setDecryptData(res.data.dec);
           setDecryptShow(true);
