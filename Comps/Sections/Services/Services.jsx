@@ -6,21 +6,21 @@ function Services(props) {
             id:1,
             img:'/sections/services/encripting.svg',
             title:'Encryption',
-            desc:'increpting your data witch an advaced algorithm',
+            desc:'Encrypt your data with the NTRUEncryption.',
             height:'h-[400px]'
         },
         {
             id:2,
             img:'/sections/services/protecting.svg',
             title:'Protection',
-            desc:'increpting your data witch an advaced algorithm',
+            desc:'Your encrypted data is unbreakable!Not even by quantum power.',
             height:'h-[450px]'
         },
         {
             id:3,
             img:'/sections/services/decripting.svg',
             title:'Decryption',
-            desc:'increpting your data witch an advaced algorithm',
+            desc:'Safely recover your encrypted data!',
             height:'h-[400px]'
         }
     ]

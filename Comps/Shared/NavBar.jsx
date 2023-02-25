@@ -12,7 +12,7 @@ export default function NavBar() {
   return (
     <nav className={`shad py-4 md:py-4 lg:py-1 px-4 md:px-8 flex items-center flex-col lg:flex-row fixed w-full backdrop-blur-sm z-50`} >
       <div className="flex justify-between items-center w-full lg:w-auto lg:mx-16 xl:mx-20">
-      <a href='#' className="font-bold text-2xl select-none cursor-pointer"><img className='h-12 ' src="/sections/navbar/qtm.svg" alt="" /></a>
+      <Link href='/#' className="font-bold text-2xl select-none cursor-pointer"><img className='h-12 ' src="/sections/navbar/qtm.svg" alt="" /></Link>
         <button className="space-y-2 w-8 lg:hidden" onClick={toggleVisible}>
           <div className="w-full h-1 rounded-full bg-black" />
           <div className="w-full h-1 rounded-full bg-black" />

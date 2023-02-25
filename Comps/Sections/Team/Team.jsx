@@ -11,7 +11,7 @@ function Team() {
     {
         firstname:"Maroua",
         lastname:"Amrouche",
-        image:"/sections/team/aa.svg"
+        image:"/sections/team/maroua.jpg"
     }
     ,
     {
@@ -22,7 +22,7 @@ function Team() {
     {
       firstname:"Selina",
       lastname:"Sendjakeddine",
-      image:"/sections/team/aa.svg"
+      image:"/sections/team/selina.jpg"
   },
   {
     firstname:"Abdelalim",
