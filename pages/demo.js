@@ -20,30 +20,32 @@ function Demo() {
     setEncryptShow(false);
     setIsVisible(false)
 
-
-    if (encrypt){
-      const res2 =await axios.get(process.env.BASE_URL+'/getKP');
-      setDecData(res2.data)
-      const res = await axios.post(process.env.BASE_URL+'/enc',{msg:message}); 
-      setEncryptData(res.data.enc);
-      setEncryptShow(true);
-      setTimeout(() => {
-                setIsVisible(true);
-                }, 11000);
-      
-    }else{
-      const res = await axios.post(process.env.BASE_URL+'/dec',{enc:message});
-      if (res.data.ok){
-        setDecryptData(res.data.dec);
-        setDecryptShow(true);
+    if (message.trim().length){
+      if (encrypt){
+        const res2 =await axios.get(process.env.NEXT_PUBLIC_BASE_URL+'/getKP');
+        setDecData(res2.data)
+        const res = await axios.post(process.env.NEXT_PUBLIC_BASE_URL+'/enc',{msg:message}); 
+        setEncryptData(res.data.enc);
+        setEncryptShow(true);
         setTimeout(() => {
-          setIsVisible(true);
-          }, 7000);
+                  setIsVisible(true);
+                  }, 11000);
+        
       }else{
-        setError(true);
+        const res = await axios.post(process.env.NEXT_PUBLIC_BASE_URL+'/dec',{enc:message});
+        if (res.data.ok){
+          setDecryptData(res.data.dec);
+          setDecryptShow(true);
+          setTimeout(() => {
+            setIsVisible(true);
+            }, 7000);
+        }else{
+          setError(true);
+        }
+        
       }
-      
     }
+    
     
   }
   
