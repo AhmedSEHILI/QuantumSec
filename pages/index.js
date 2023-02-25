@@ -1,4 +1,3 @@
-import Overview from "@/Comps/Overview/Overview";
 import Contact from "@/Comps/Sections/ContactUs/Contact";
 import Hero from "@/Comps/Sections/Hero/Hero";
 import Questions from "@/Comps/Sections/Questions/Questions";
@@ -9,13 +8,12 @@ import NavBar from "@/Comps/Shared/NavBar";
 export default function Home() {
   return (
     <div className="">
-      {/* <NavBar />
+      <NavBar />
       <Hero />
       <Services />
       <Questions />
       <Contact />
-      <Footer /> */}
-      <Overview />
+      <Footer />
     </div>
   )
 }
