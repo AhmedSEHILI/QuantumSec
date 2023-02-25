@@ -1,1 +1,1 @@
-export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?process.env.NEXT_PUBLIC_BASE_URL :'https://chih3b.pythonanywhere.com'
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ? process.env.NEXT_PUBLIC_BASE_URL :'https://chih3b.pythonanywhere.com'

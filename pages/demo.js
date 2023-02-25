@@ -59,7 +59,7 @@ function Demo() {
           <button onClick={handleClick} className='bg-green3 relative text-white font-semibold px-6 py-2 rounded-lg -left-5 '>{encrypt?"Encrypt":"Decrypt"}</button>
         </div>
        
-        <div className='flex flex-col items-start justify-start '>
+        <div className='flex flex-col items-start justify-start self-start '>
           <pre className='text-black text-left mt-24 md:self-start  max-w-5xl font-medium text-2xl '>
           {encryptShow && <>
           <Typewriter
