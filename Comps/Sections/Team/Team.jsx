@@ -31,11 +31,11 @@ function Team() {
 }
 ]
   return (
-    <div id='about' className=' max-h-screen text-center mx-auto px-10  pb-28 pt-32 md:px-24 w-screen'>
+    <div id='about' className=' max-h-screen text-center mx-auto px-10  pb-28 pt-20 md:px-24 w-screen'>
           <h2 className='SecTitle'>~ Our Team ~</h2>
          <Carousel members={members} />
-    </div>
-  )
+    </div> 
+  );
 }
 
 export default Team

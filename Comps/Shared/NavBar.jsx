@@ -25,11 +25,11 @@ export default function NavBar() {
         }`}
       >
         <div className="flex flex-col items-center lg:flex-row md:justify-end md:w-full space-y-4 lg:space-y-0 my-4 font-semibold text-sm md:text-base lg:text-lg lg:space-x-8">
-                   <NavButt href={'/#services'} section={'Our services'} />
-                   <NavButt href={'/#questions'} section={'FAQs'} />
-                   <NavButt href={'/#contact'} section={'Contact Us'} />
-                   <NavButt href={'/#about'} section={'About Us'} />
-                 <Link href="/demo"> <Button  msg={'Try it !'} bg={'bg-green4 text-white hover:bg-green1 hover:text-green4'}/></Link> 
+                   <NavButt setVisible={setVisible} href={'/#services'} section={'Our services'} />
+                   <NavButt setVisible={setVisible} href={'/#questions'} section={'FAQs'} />
+                   <NavButt setVisible={setVisible} href={'/#contact'} section={'Contact Us'} />
+                   <NavButt setVisible={setVisible} href={'/#about'} section={'About Us'} />
+                 <Link onClick={()=>setVisible(false)} href="/demo"> <Button  msg={'Try it !'} bg={'bg-green4 text-white hover:bg-green1 hover:text-green4'}/></Link> 
                     
 
         </div>
