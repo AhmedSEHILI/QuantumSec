@@ -19,7 +19,8 @@ function Demo() {
     setError(false);
     setDecryptShow(false);
     setEncryptShow(false);
-    setIsVisible(false)
+    setIsVisible(false);
+    setIsVisible(false);
 
     if (message.trim().length){
       if (encrypt){
@@ -60,7 +61,7 @@ function Demo() {
         </div>
        
         <div className='flex flex-col items-start justify-start self-start '>
-          <pre className='text-black text-left mt-24 md:self-start  max-w-5xl font-medium text-2xl '>
+          <pre className='text-black text-left mt-16 md:self-start  max-w-5xl font-medium text-2xl '>
           {encryptShow && <>
           <Typewriter
                 words={['Encrypting\nGenerating key pair ..... \nEncrypting message ......\nHere is the encrypted data (hex) :']}
@@ -87,7 +88,7 @@ function Demo() {
           <div className='text-black text-left self-start font-medium text-2xl break-words break-all'>
             {encryptShow && <>
                 {isVisible&& encryptData &&<p  >{encryptData}</p>}
-              {isVisible &&<p className='underline cursor-pointer '  onClick={()=>setIsVisibleD(true)}>Would you like to view the public key ?</p>}
+              {isVisible &&<p className='underline cursor-pointer mt-10'  onClick={()=>setIsVisibleD(true)}>Would you like to view the public key ?</p>}
               {isVisibleD && decData && decData.pub}
             </>}
             {
