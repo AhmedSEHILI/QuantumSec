@@ -1,38 +1,12 @@
 import Carousel from '@/Comps/Shared/Carousel'
+import { members } from '@/data/data';
 
 
 function Team() {
-  const members= [
-    {
-        firstname:"Ahmed",
-        lastname:"Sehili",
-        image:"/sections/team/ahmed.svg"
-    },
-    {
-        firstname:"Maroua",
-        lastname:"Amrouche",
-        image:"/sections/team/maroua.svg"
-    }
-    ,
-    {
-        firstname:"Chiheb",
-        lastname:"Yaici",
-        image:"/sections/team/chiheb.jpg"
-    },
-    {
-      firstname:"Selina",
-      lastname:"Sendjakeddine",
-      image:"/sections/team/selina.jpg"
-  },
-  {
-    firstname:"Abdelalim",
-    lastname:"Atoui",
-    image:"/sections/team/abdelalim.svg"
-}
-]
+  
   return (
-    <div id='about' className=' max-h-screen text-center mx-auto px-2  pb-28 pt-20 md:px-24 w-screen'>
-          <h2 className='SecTitle'>~ Our Team ~</h2>
+    <div id='about' className='lg:flex lg:flex-col lg:items-center  px-2  pb-28 pt-24 md:px-24 '>
+          <h2 className='SecTitle mx-auto text-center'>~ Our Team ~</h2>
          <Carousel members={members} />
     </div> 
   );

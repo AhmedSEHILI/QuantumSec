@@ -1,16 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from './Button';
 import NavButt from './NavButt';
 import Link from 'next/link';
+import { debounce } from "@/data/data";
 
 export default function NavBar() {
   const [visible, setVisible] = useState(false);
   const toggleVisible = () => setVisible(!visible);
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
+  const handleScroll = debounce(() => {
+    const currentScrollPos = window.pageYOffset;
 
+    setIsVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 50) || currentScrollPos < 10);
+
+    setPrevScrollPos(currentScrollPos);
+
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+
+  }, [prevScrollPos, visible, handleScroll]);
 
   return (
-    <nav className={`shad py-4 md:py-4 lg:py-1 px-4 md:px-8 flex items-center flex-col lg:flex-row fixed w-full  backdrop-blur-sm z-50`} >
+    <nav style={{top:isVisible?"0":"-90px"}} className={`shad py-4 md:py-4 lg:py-1 px-4 md:px-8 flex items-center flex-col lg:flex-row fixed w-full transition-all duration-500 backdrop-blur-sm z-50`} >
       <div className="flex justify-between items-center w-full lg:w-auto lg:mx-16 xl:mx-20">
       <Link href='/#' className="font-bold text-2xl select-none cursor-pointer"><img className='h-12 ' src="/sections/navbar/qtm.svg" alt="" /></Link>
         <button className="space-y-2 w-8 lg:hidden" onClick={toggleVisible}>

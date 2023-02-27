@@ -8,9 +8,8 @@ function Hero() {
 
         <div className='py-20'>
             <Bg />
-            <div className=" flex flex-col-reverse justify-center md:flex-row pt-28 md:justify-evenly items-center w-full">
+            <div className=" flex flex-col-reverse justify-center md:flex-row pt-14 lg:pt-28 md:justify-evenly items-center w-full">
                 <div className="flex flex-col items-center md:items-start text-center md:text-start  gap-16">
-                    {/* <p className="text-center">— send secure messages .. quantum can't break it   </p> */}
                     <h2 className="font-extrabold text-4xl md:text-6xl">QTM <br/>Cryptography</h2>
                     <p className=" w-[80%] md:w-[500px] text-justify">QTM is a post quantum cryptography solution While quantum computers will soon break modern ciphers,We provide the best alternative, a secure implementation that even quantum can't break in a 100 years!</p>
                     <div className="flex flex-row gap-2 md:gap-6 w-fit ">

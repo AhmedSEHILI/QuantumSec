@@ -98,7 +98,7 @@ function Demo() {
               </>
             }
             {
-              error && <p className='text-red font-semibold'>You must enter a hex string</p>
+              error && <p className='text-red-700 font-semibold'>You must enter a hex string</p>
             }
           </div>
         </div>

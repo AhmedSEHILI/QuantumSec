@@ -11,7 +11,7 @@
     display: none;
   }
 body{
-  font-family: "poppins",sans-serif;
+  font-family: "Poppins",sans-serif;
 }
   
 .shad {
@@ -19,7 +19,7 @@ body{
 }
 
 .section{
-  @apply py-20 container flex flex-col min-h-screen  items-center mx-auto
+  @apply py-14 lg:py-24 container flex flex-col lg:min-h-screen  items-center mx-auto
 }
 
 .SecTitle {
@@ -43,8 +43,4 @@ body{
   transition: max-height 0.2s ease-out;
   background-color: white;
 }
-pre  span{
-  word-break: break-all;
-  word-wrap: break-word;
-  width: 100px;
-}
+
